@@ -1,0 +1,19 @@
+===== REGISTRO DE COMPRAS =====
+
+Compra 1:
+Produto: Arroz
+Quantidade: 10
+Preço Unitário: R$ 29,90
+Total: R$ 299,00
+
+Compra 2:
+Produto: Feijão
+Quantidade: 5
+Preço Unitário: R$ 10,00
+Total: R$ 50,00
+
+Compra 3:
+Produto: Carne
+Quantidade: 2
+Preço Unitário: R$ 30,00
+Total: R$ 60,00

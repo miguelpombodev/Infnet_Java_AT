@@ -113,7 +113,7 @@ public class Main {
 
                 float salarioAnual = salarioMensal * 12;
                 double aliquota = 0;
-                double imposto = 0;
+                double imposto;
 
                 if (salarioAnual <= limiteSalarioIsento) {
                     aliquota = 0;
@@ -347,13 +347,13 @@ public class Main {
 
                 switch (opcao) {
                     case 1:
-                        System.out.println("Informe o valor a depositar:");
+                        System.out.println("Informe o valor do depositar:");
                         float valorDeposito = scanner.nextFloat();
                         scanner.nextLine();
                         conta.depositar(valorDeposito);
                         break;
                     case 2:
-                        System.out.println("Informe o valor a sacar:");
+                        System.out.println("Informe o valor do saque:");
                         float valorSaque = scanner.nextFloat();
                         scanner.nextLine();
                         conta.sacar(valorSaque);
@@ -387,8 +387,8 @@ public class Main {
             System.out.println("Digite o nome do produto:");
             String produto = scanner.nextLine();
 
-            int quantidade = 0;
-            float precoUnitario = 0;
+            int quantidade;
+            float precoUnitario;
 
             try {
                 System.out.println("Digite a quantidade:");

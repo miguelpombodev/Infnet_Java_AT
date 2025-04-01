@@ -10,13 +10,14 @@ public class ContaBancaria {
     }
 
     public void depositar(float valor) {
-        if (valor > 0) {
-            this.saldo += valor;
-            System.out.println("Depósito de R$ " + String.format("%.2f", valor) + " realizado com sucesso.");
-            exibirSaldo();
-        } else {
+        if (valor < 0) {
             System.out.println("Valor de depósito inválido. O valor deve ser positivo.");
+            return;
         }
+
+        this.saldo += valor;
+        System.out.println("Depósito de R$ " + String.format("%.2f", valor) + " realizado com sucesso.");
+        exibirSaldo();
     }
 
     public void sacar(float valor) {
@@ -24,15 +25,15 @@ public class ContaBancaria {
             System.out.println("Valor de saque inválido. O valor deve ser positivo.");
             return;
         }
-
-        if (this.saldo >= valor) {
-            this.saldo -= valor;
-            System.out.println("Saque de R$ " + String.format("%.2f", valor) + " realizado com sucesso.");
-            exibirSaldo();
-        } else {
+        if (valor >= this.saldo) {
             System.out.println("Saldo insuficiente para realizar o saque.");
             exibirSaldo();
+            return;
         }
+
+        this.saldo -= valor;
+        System.out.println("Saque de R$ " + String.format("%.2f", valor) + " realizado com sucesso.");
+        exibirSaldo();
     }
 
     public void exibirSaldo() {
